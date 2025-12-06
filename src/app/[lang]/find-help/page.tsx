@@ -21,7 +21,7 @@ export default async function FindHelpPage({
 
   return (
     <PageWrapper>
-       <FindHelpClientPage dict={dict} lang={lang} cases={MOCK_CASES} />
+       <FindHelpClientPage dict={dict} lang={lang} />
     </PageWrapper>
   );
 }

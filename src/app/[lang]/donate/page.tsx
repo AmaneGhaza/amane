@@ -1,17 +1,130 @@
 
+'use client';
+import React, { useState } from 'react';
 import { getDictionary } from '@/lib/get-dictionary';
 import type { Locale } from '@/app/i18n-config';
 import { PageWrapper } from '@/components/layout/PageWrapper';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Heart, Globe, PieChart } from 'lucide-react';
+import { Heart, Globe, PieChart, CheckCircle } from 'lucide-react';
+import type { Dictionary } from '@/lib/types';
 
-export default async function DonorInfoPage({
+
+function DonorForm({ dict, lang }: { dict: Dictionary, lang: Locale }) {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    donationType: 'financial',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitted(true);
+      window.scrollTo(0,0);
+    }, 1000);
+  };
+
+  if (isSubmitted) {
+    return (
+        <div className="min-h-[60vh] flex flex-col items-center justify-center text-center p-6 bg-white rounded-2xl shadow-xl border border-gray-100">
+          <div className="w-20 h-20 bg-green-100 text-[#006400] rounded-full flex items-center justify-center mb-6">
+            <CheckCircle size={48} />
+          </div>
+          <h2 className="text-3xl font-bold mb-4">{dict.requestHelpPage.form.success_title}</h2>
+          <p className="text-gray-600 max-w-md text-lg mb-8">Thank you for your generosity. We will contact you shortly to coordinate your donation.</p>
+          <Button variant="default" asChild>
+            <Link href={`/${lang}`}>{dict.navigation.home}</Link>
+          </Button>
+        </div>
+    );
+  }
+
+  return (
+      <div className="bg-[#111111] text-white rounded-3xl p-8 md:p-12">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Ready to make a difference?</h2>
+        <form onSubmit={handleSubmit} className="space-y-6 max-w-lg mx-auto">
+            <div>
+              <label className="block text-sm font-bold mb-2 text-gray-300">Name</label>
+              <input
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                className="w-full p-3 bg-gray-800 border-2 border-gray-700 rounded-xl focus:border-[#006400] outline-none text-white"
+                required
+              />
+            </div>
+             <div>
+              <label className="block text-sm font-bold mb-2 text-gray-300">Email</label>
+              <input
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                className="w-full p-3 bg-gray-800 border-2 border-gray-700 rounded-xl focus:border-[#006400] outline-none text-white"
+                required
+              />
+            </div>
+            <div>
+               <label className="block text-sm font-bold mb-2 text-gray-300">I want to help with...</label>
+               <select
+                name="donationType"
+                value={formData.donationType}
+                onChange={handleChange}
+                className="w-full p-3 bg-gray-800 border-2 border-gray-700 rounded-xl focus:border-[#006400] outline-none text-white"
+               >
+                 <option value="financial">{dict.howItHelps.categories.financial}</option>
+                 <option value="medical">{dict.howItHelps.categories.medical}</option>
+                 <option value="food">{dict.howItHelps.categories.food}</option>
+                 <option value="shelter">{dict.howItHelps.categories.shelter}</option>
+                 <option value="education">{dict.howItHelps.categories.education}</option>
+               </select>
+            </div>
+            <div>
+              <label className="block text-sm font-bold mb-2 text-gray-300">Message (Optional)</label>
+              <textarea
+                name="message"
+                rows={3}
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Let us know if you have specific preferences."
+                className="w-full p-3 bg-gray-800 border-2 border-gray-700 rounded-xl focus:border-[#006400] outline-none resize-none text-white"
+              />
+            </div>
+             <Button type="submit" size="lg" className="w-full bg-[#006400] hover:bg-[#006400]/90">
+                {dict.buttons.submit}
+             </Button>
+        </form>
+      </div>
+  )
+}
+
+
+export default function DonorInfoPage({
   params: { lang },
 }: {
   params: { lang: Locale };
 }) {
-  const dict = await getDictionary(lang);
+
+  const [dict, setDict] = React.useState<any>(null);
+
+  React.useEffect(() => {
+    getDictionary(lang).then(setDict);
+  }, [lang]);
+
+  if (!dict) {
+    return null; // or a loading spinner
+  }
+
 
   return (
     <PageWrapper>
@@ -47,16 +160,7 @@ export default async function DonorInfoPage({
             </div>
         </div>
 
-        <div className="bg-[#111111] text-white rounded-3xl p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Ready to make a difference?</h2>
-            <div className="flex justify-center">
-                <Button variant="secondary" size="lg" className="shadow-white/20 shadow-xl bg-[#006400] hover:bg-[#006400]/90" asChild>
-                    <Link href={`/${lang}/find-help`}>
-                        {dict.navigation.findHelp}
-                    </Link>
-                </Button>
-            </div>
-        </div>
+       <DonorForm dict={dict} lang={lang} />
         </div>
     </PageWrapper>
   );

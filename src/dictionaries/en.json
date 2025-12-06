@@ -319,7 +319,7 @@
   },
   "findHelpPage": {
     "title": "Find Help",
-    "description": "Use the filters to find available support.",
+    "description": "Select a category below to start your request for assistance.",
     "results": "Search Results",
     "status": {
       "available": "Available",

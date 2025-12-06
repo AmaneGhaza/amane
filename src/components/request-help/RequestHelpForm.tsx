@@ -1,12 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { Locale } from '@/app/i18n-config';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 import type { Dictionary } from '@/lib/types';
 
-export default function RequestHelpForm({ dict, lang }: { dict: Dictionary, lang: Locale }) {
+export default function RequestHelpForm({ dict, lang, initialCategory }: { dict: Dictionary, lang: Locale, initialCategory: string }) {
   const [step, setStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -18,6 +18,12 @@ export default function RequestHelpForm({ dict, lang }: { dict: Dictionary, lang
     description: '',
     phone: ''
   });
+
+  useEffect(() => {
+    if (initialCategory) {
+      setFormData(prev => ({ ...prev, category: initialCategory }));
+    }
+  }, [initialCategory]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -121,10 +127,12 @@ export default function RequestHelpForm({ dict, lang }: { dict: Dictionary, lang
                 className="w-full p-3 border-2 border-gray-200 rounded-xl focus:border-[#006400] outline-none bg-white"
                 dir={lang === 'ar' ? 'rtl' : 'ltr'}
                >
-                 <option value="medical">{dict.requestHelpPage.helpTypes.medical}</option>
-                 <option value="food">{dict.requestHelpPage.helpTypes.food}</option>
-                 <option value="shelter">{dict.requestHelpPage.helpTypes.shelter}</option>
-                 <option value="education">{dict.requestHelpPage.helpTypes.education}</option>
+                 <option value="medical">{dict.howItHelps.categories.medical}</option>
+                 <option value="food">{dict.howItHelps.categories.food}</option>
+                 <option value="shelter">{dict.howItHelps.categories.shelter}</option>
+                 <option value="education">{dict.howItHelps.categories.education}</option>
+                 <option value="elderly">{dict.howItHelps.categories.elderly}</option>
+                 <option value="financial">{dict.howItHelps.categories.financial}</option>
                </select>
             </div>
              <div>
@@ -198,4 +206,4 @@ export default function RequestHelpForm({ dict, lang }: { dict: Dictionary, lang
       </div>
     </>
   );
-};
+}
