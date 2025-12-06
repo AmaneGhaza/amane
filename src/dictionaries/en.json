@@ -78,15 +78,21 @@
   },
   "buttons": {
     "submit": "Submit",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "back": "Back",
+    "next": "Next"
   },
   "requestHelpPage": {
     "title": "Request Help",
     "description": "Fill out the form below to create your request. It will be reviewed and matched with suitable donors.",
+    "step": "Step",
     "form": {
       "fullName": {
         "label": "Full Name",
         "placeholder": "Enter your full name"
+      },
+      "age": {
+        "label": "Age"
       },
       "city": {
         "label": "City",
@@ -101,10 +107,23 @@
         "placeholder": "Clearly describe your situation and needs."
       },
       "contactPreference": {
-        "label": "Contact preference",
-        "placeholder": "Choose a contact method"
+        "label": "Contact Information",
+        "placeholder": "Enter your phone or e-mail"
       },
-      "success": "Your request has been submitted successfully!",
+      "urgency": {
+        "label": "Urgency Level",
+        "high": "Urgent",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "steps": {
+        "identity": "Personal Info",
+        "location": "Location",
+        "needs": "Need Details",
+        "contact": "Contact Info"
+      },
+      "success_title": "Request Submitted!",
+      "success": "Your request has been submitted successfully! Our team will review it and get in touch.",
       "error": "An error occurred. Please try again."
     },
     "helpTypes": {
@@ -128,7 +147,9 @@
     "status": {
       "available": "Available",
       "unavailable": "Temporarily unavailable"
-    }
+    },
+    "allCategories": "All Categories",
+    "noResults": "No cases found."
   },
   "donatePage": {
     "title": "Become a Donor",
