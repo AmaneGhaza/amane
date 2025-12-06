@@ -108,24 +108,7 @@ function DonorForm({ dict, lang }: { dict: Dictionary, lang: Locale }) {
   )
 }
 
-
-export default function DonorInfoPage({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
-
-  const [dict, setDict] = React.useState<any>(null);
-
-  React.useEffect(() => {
-    getDictionary(lang).then(setDict);
-  }, [lang]);
-
-  if (!dict) {
-    return null; // or a loading spinner
-  }
-
-
+function DonorInfoPageComponent({ dict, lang }: { dict: Dictionary, lang: Locale }) {
   return (
     <PageWrapper>
         <div className="container mx-auto px-4 py-12 max-w-4xl">
@@ -164,4 +147,16 @@ export default function DonorInfoPage({
         </div>
     </PageWrapper>
   );
+};
+
+
+export default async function DonorInfoPage({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) {
+
+  const dict = await getDictionary(lang);
+
+  return <DonorInfoPageComponent dict={dict} lang={lang} />;
 };
