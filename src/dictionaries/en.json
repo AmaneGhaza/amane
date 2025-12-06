@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Aman Gaza",
@@ -23,6 +22,184 @@
       "findHelp": "Find Help",
       "donate": "Become a Donor"
     }
+  },
+  "whoWeAre": {
+    "title": "Who We Are",
+    "description": "We are a global platform connecting people in Gaza who need help with verified donors worldwide. Built on trust, transparency, and dignity.",
+    "mission": "Our Mission",
+    "missionStatement": "To create a safe, transparent bridge between families in need and compassionate donors globally, ensuring help reaches those who need it most with dignity and speed.",
+    "values": {
+      "compassion": "Compassion First",
+      "compassionDesc": "Every request is treated with empathy and urgency. We see people, not numbers.",
+      "trust": "Built on Trust",
+      "trustDesc": "All donors are verified. All requests are reviewed. Safety is non-negotiable.",
+      "community": "Community Driven",
+      "communityDesc": "We're powered by ordinary people doing extraordinary acts of kindness.",
+      "transparency": "Complete Transparency",
+      "transparencyDesc": "Track every step. Know exactly who helps and how. Zero hidden fees or intermediaries."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works - Step by Step",
+    "subtitle": "From request to receiving help - here's the complete journey",
+    "detailsLabel": "What happens",
+    "steps": {
+      "step1": {
+        "title": "Submit Your Request",
+        "description": "Fill out a simple form explaining your situation and what kind of help you need.",
+        "details": "Your information is encrypted and reviewed by our team within 24 hours. You'll receive a confirmation email immediately after submission."
+      },
+      "step2": {
+        "title": "Verification & Review",
+        "description": "Our team reviews your request to ensure authenticity and categorize your needs properly.",
+        "details": "We verify contact information and may reach out for clarification. This ensures donors can trust the platform and help reaches real people."
+      },
+      "step3": {
+        "title": "Matching with Donors",
+        "description": "Your verified profile is shared with our network of donors who can provide the specific help you need.",
+        "details": "Donors see your profile with your chosen privacy settings. Those interested will initiate contact through our secure messaging system."
+      },
+      "step4": {
+        "title": "Direct Communication",
+        "description": "Connect directly with donors who want to help. Discuss details, timing, and logistics.",
+        "details": "All communication happens through our platform for your safety. You control what information you share and when."
+      },
+      "step5": {
+        "title": "Receive Help",
+        "description": "Get the support you need directly from verified donors. No middlemen, no fees.",
+        "details": "Help is delivered based on what was agreed. You can provide updates and thank donors through the platform. Your feedback helps improve the community."
+      }
+    }
+  },
+  "urgentNeeds": {
+    "title": "Urgent Cases Right Now",
+    "subtitle": "These families need immediate assistance. Every moment counts.",
+    "viewAll": "View All Urgent Cases",
+    "priority": {
+      "urgent": "URGENT",
+      "high": "High Priority"
+    },
+    "cases": {
+      "case1": {
+        "category": "Medical Emergency",
+        "description": "Family needs immediate medical supplies for elderly member with chronic illness.",
+        "location": "Gaza City",
+        "timePosted": "Posted 2 hours ago"
+      },
+      "case2": {
+        "category": "Food & Water",
+        "description": "Mother with 4 children urgently needs food and clean water supplies.",
+        "location": "Rafah",
+        "timePosted": "Posted 5 hours ago"
+      },
+      "case3": {
+        "category": "Shelter Support",
+        "description": "Displaced family seeking temporary shelter assistance and basic necessities.",
+        "location": "Khan Yunis",
+        "timePosted": "Posted 8 hours ago"
+      }
+    }
+  },
+  "trustIndicators": {
+    "title": "Why Trust Us",
+    "subtitle": "Numbers and guarantees that show our commitment",
+    "stats": {
+      "totalHelped": {
+        "number": "32,000+",
+        "label": "Families Helped"
+      },
+      "activeDonors": {
+        "number": "12,450+",
+        "label": "Active Donors"
+      },
+      "successRate": {
+        "number": "94%",
+        "label": "Success Rate"
+      },
+      "avgResponseTime": {
+        "number": "< 48h",
+        "label": "Avg Response Time"
+      }
+    },
+    "guaranteesTitle": "Our Guarantees to You",
+    "guarantees": {
+      "guarantee1": "100% free - no fees, no commissions, no hidden costs ever",
+      "guarantee2": "All donors verified through ID and background checks",
+      "guarantee3": "Your privacy protected - you control what information is shared",
+      "guarantee4": "Direct connection - no money handlers or intermediaries",
+      "guarantee5": "24/7 support team available in Arabic, English, and French"
+    }
+  },
+  "testimonials": {
+    "title": "Real Stories from Real People",
+    "subtitle": "Here's what families and donors are saying",
+    "stories": {
+      "story1": {
+        "name": "Fatima A.",
+        "location": "Gaza City",
+        "story": "Within 2 days of posting my request, I was connected with a donor who provided medical supplies my father desperately needed. The platform is truly a lifeline.",
+        "helpType": "Medical Help"
+      },
+      "story2": {
+        "name": "Ahmed K.",
+        "location": "Rafah",
+        "story": "I was skeptical at first, but the verification process made me feel safe. I received food supplies for my family within a week. Thank you!",
+        "helpType": "Food Support"
+      },
+      "story3": {
+        "name": "Maryam S.",
+        "location": "Khan Yunis",
+        "story": "The donors I connected with didn't just send help - they checked in regularly and became like family. This platform restored my faith in humanity.",
+        "helpType": "Financial Aid"
+      }
+    }
+  },
+  "faq": {
+    "title": "Common Questions Answered",
+    "subtitle": "Everything you need to know before getting started",
+    "questions": {
+      "howToRequest": {
+        "question": "How do I request help?",
+        "answer": "Simply click 'Request Help' button, fill out the form with your situation and needs, and submit. Our team reviews all requests within 24 hours and will contact you for verification."
+      },
+      "isSafe": {
+        "question": "Is this platform safe and legitimate?",
+        "answer": "Yes. We verify all donors through ID checks and background screening. Your information is encrypted. We've helped over 32,000 families since 2023 with complete transparency and zero scams reported."
+      },
+      "howLong": {
+        "question": "How long does it take to get help?",
+        "answer": "Most requests are reviewed within 24 hours. Matching with donors typically happens within 3-7 days depending on your needs and location. Urgent cases are prioritized and often matched within 48 hours."
+      },
+      "whatInfo": {
+        "question": "What information do I need to provide?",
+        "answer": "You'll need: your full name, age, location (city), contact method (phone/email/WhatsApp), type of help needed, and a description of your situation. You can choose what additional information to share with donors."
+      },
+      "fees": {
+        "question": "Are there any fees?",
+        "answer": "Absolutely zero fees. This platform is 100% free for everyone. We don't take commissions, we don't charge donors, and we never charge families who need help. We're funded by transparent donations."
+      },
+      "whoCanHelp": {
+        "question": "Who are the donors?",
+        "answer": "Our donors are verified individuals and organizations from around the world who want to help. Every donor goes through ID verification and background checks. You can see donor profiles before connecting."
+      },
+      "privacy": {
+        "question": "How is my privacy protected?",
+        "answer": "You control what information is shared. Your full contact details are never public. Communication happens through our secure platform. You can choose to remain partially anonymous if you prefer."
+      },
+      "update": {
+        "question": "Can I update my request?",
+        "answer": "Yes! You can log in anytime to update your request, add information, or mark it as fulfilled. You can also send updates to donors who have expressed interest in helping you."
+      }
+    }
+  },
+  "cta": {
+    "title": "Every Second Counts",
+    "subtitle": "Thousands of families are waiting for help right now. Whether you need assistance or want to give it, start today.",
+    "buttons": {
+      "needHelp": "I Need Help",
+      "wantToHelp": "I Want to Help"
+    },
+    "urgencyNote": "Urgent requests are prioritized and reviewed within 12 hours"
   },
   "howItHelps": {
     "title": "How This Platform Helps",

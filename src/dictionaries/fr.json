@@ -1,4 +1,3 @@
-
 {
   "metadata": {
     "title": "Aman Gaza",
@@ -23,6 +22,184 @@
       "findHelp": "Trouver de l'aide",
       "donate": "Devenir Donateur"
     }
+  },
+  "whoWeAre": {
+    "title": "Qui Sommes-Nous",
+    "description": "Nous sommes une plateforme mondiale connectant les personnes dans le besoin à Gaza avec des donateurs vérifiés dans le monde entier. Construite sur la confiance, la transparence et la dignité.",
+    "mission": "Notre Mission",
+    "missionStatement": "Créer un pont sûr et transparent entre les familles dans le besoin et les donateurs compatissants dans le monde entier, en assurant que l'aide atteigne ceux qui en ont le plus besoin avec dignité et rapidité.",
+    "values": {
+      "compassion": "Compassion d'Abord",
+      "compassionDesc": "Chaque demande est traitée avec empathie et urgence. Nous voyons des personnes, pas des chiffres.",
+      "trust": "Fondé sur la Confiance",
+      "trustDesc": "Tous les donateurs sont vérifiés. Toutes les demandes sont examinées. La sécurité n'est pas négociable.",
+      "community": "Communauté d'Abord",
+      "communityDesc": "Nous sommes alimentés par des gens ordinaires accomplissant des actes de bonté extraordinaires.",
+      "transparency": "Transparence Complète",
+      "transparencyDesc": "Suivez chaque étape. Sachez exactement qui aide et comment. Zéro frais ou intermédiaires cachés."
+    }
+  },
+  "howItWorks": {
+    "title": "Comment Ça Marche - Étape par Étape",
+    "subtitle": "De la demande à la réception de l'aide - voici le parcours complet",
+    "detailsLabel": "Ce qui se passe",
+    "steps": {
+      "step1": {
+        "title": "Soumettez Votre Demande",
+        "description": "Remplissez un formulaire simple expliquant votre situation et le type d'aide dont vous avez besoin.",
+        "details": "Vos informations sont cryptées et examinées par notre équipe dans les 24 heures. Vous recevrez un email de confirmation immédiatement après la soumission."
+      },
+      "step2": {
+        "title": "Vérification et Examen",
+        "description": "Notre équipe examine votre demande pour s'assurer de son authenticité et catégoriser correctement vos besoins.",
+        "details": "Nous vérifions les coordonnées et pouvons vous contacter pour des clarifications. Cela garantit que les donateurs peuvent faire confiance à la plateforme et que l'aide atteint de vraies personnes."
+      },
+      "step3": {
+        "title": "Mise en Relation avec les Donateurs",
+        "description": "Votre profil vérifié est partagé avec notre réseau de donateurs qui peuvent fournir l'aide spécifique dont vous avez besoin.",
+        "details": "Les donateurs voient votre profil avec les paramètres de confidentialité que vous avez choisis. Les personnes intéressées initieront le contact via notre système de messagerie sécurisé."
+      },
+      "step4": {
+        "title": "Communication Directe",
+        "description": "Connectez-vous directement avec les donateurs qui veulent aider. Discutez des détails, du timing et de la logistique.",
+        "details": "Toute communication se fait via notre plateforme pour votre sécurité. Vous contrôlez quelles informations vous partagez et quand."
+      },
+      "step5": {
+        "title": "Recevoir de l'Aide",
+        "description": "Obtenez le soutien dont vous avez besoin directement de donateurs vérifiés. Pas d'intermédiaires, pas de frais.",
+        "details": "L'aide est livrée selon ce qui a été convenu. Vous pouvez fournir des mises à jour et remercier les donateurs via la plateforme. Vos retours aident à améliorer la communauté."
+      }
+    }
+  },
+  "urgentNeeds": {
+    "title": "Cas Urgents en Ce Moment",
+    "subtitle": "Ces familles ont besoin d'une assistance immédiate. Chaque instant compte.",
+    "viewAll": "Voir Tous les Cas Urgents",
+    "priority": {
+      "urgent": "URGENT",
+      "high": "Priorité Élevée"
+    },
+    "cases": {
+      "case1": {
+        "category": "Urgence Médicale",
+        "description": "Famille nécessitant des fournitures médicales immédiates pour un membre âgé atteint d'une maladie chronique.",
+        "location": "Gaza City",
+        "timePosted": "Publié il y a 2 heures"
+      },
+      "case2": {
+        "category": "Nourriture et Eau",
+        "description": "Mère avec 4 enfants ayant besoin de toute urgence de nourriture et d'eau potable.",
+        "location": "Rafah",
+        "timePosted": "Publié il y a 5 heures"
+      },
+      "case3": {
+        "category": "Soutien au Logement",
+        "description": "Famille déplacée cherchant une aide temporaire pour le logement et les nécessités de base.",
+        "location": "Khan Yunis",
+        "timePosted": "Publié il y a 8 heures"
+      }
+    }
+  },
+  "trustIndicators": {
+    "title": "Pourquoi Nous Faire Confiance",
+    "subtitle": "Des chiffres et des garanties qui montrent notre engagement",
+    "stats": {
+      "totalHelped": {
+        "number": "32 000+",
+        "label": "Familles Aidées"
+      },
+      "activeDonors": {
+        "number": "12 450+",
+        "label": "Donateurs Actifs"
+      },
+      "successRate": {
+        "number": "94%",
+        "label": "Taux de Réussite"
+      },
+      "avgResponseTime": {
+        "number": "< 48h",
+        "label": "Temps de Réponse Moyen"
+      }
+    },
+    "guaranteesTitle": "Nos Garanties pour Vous",
+    "guarantees": {
+      "guarantee1": "100% gratuit - aucun frais, aucune commission, aucun coût caché jamais",
+      "guarantee2": "Tous les donateurs vérifiés par identification et vérification des antécédents",
+      "guarantee3": "Votre vie privée protégée - vous contrôlez quelles informations sont partagées",
+      "guarantee4": "Connexion directe - pas de gestionnaires d'argent ou d'intermédiaires",
+      "guarantee5": "Équipe de support 24/7 disponible en arabe, anglais et français"
+    }
+  },
+  "testimonials": {
+    "title": "Vraies Histoires de Vraies Personnes",
+    "subtitle": "Voici ce que disent les familles et les donateurs",
+    "stories": {
+      "story1": {
+        "name": "Fatima A.",
+        "location": "Gaza City",
+        "story": "Dans les 2 jours suivant la publication de ma demande, j'ai été mise en relation avec un donateur qui a fourni les fournitures médicales dont mon père avait désespérément besoin. La plateforme est vraiment une bouée de sauvetage.",
+        "helpType": "Aide Médicale"
+      },
+      "story2": {
+        "name": "Ahmed K.",
+        "location": "Rafah",
+        "story": "J'étais sceptique au début, mais le processus de vérification m'a fait me sentir en sécurité. J'ai reçu des provisions alimentaires pour ma famille en une semaine. Merci!",
+        "helpType": "Soutien Alimentaire"
+      },
+      "story3": {
+        "name": "Maryam S.",
+        "location": "Khan Yunis",
+        "story": "Les donateurs avec qui j'ai été en contact n'ont pas seulement envoyé de l'aide - ils ont vérifié régulièrement et sont devenus comme de la famille. Cette plateforme a restauré ma foi en l'humanité.",
+        "helpType": "Aide Financière"
+      }
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquentes Répondues",
+    "subtitle": "Tout ce que vous devez savoir avant de commencer",
+    "questions": {
+      "howToRequest": {
+        "question": "Comment demander de l'aide?",
+        "answer": "Cliquez simplement sur le bouton 'Demander de l'aide', remplissez le formulaire avec votre situation et vos besoins, et soumettez. Notre équipe examine toutes les demandes dans les 24 heures et vous contactera pour vérification."
+      },
+      "isSafe": {
+        "question": "Cette plateforme est-elle sûre et légitime?",
+        "answer": "Oui. Nous vérifions tous les donateurs par des contrôles d'identité et des vérifications d'antécédents. Vos informations sont cryptées. Nous avons aidé plus de 32 000 familles depuis 2023 avec une transparence complète et zéro fraude signalée."
+      },
+      "howLong": {
+        "question": "Combien de temps faut-il pour obtenir de l'aide?",
+        "answer": "La plupart des demandes sont examinées dans les 24 heures. La mise en relation avec les donateurs se fait généralement dans les 3 à 7 jours selon vos besoins et votre emplacement. Les cas urgents sont prioritaires et souvent mis en relation dans les 48 heures."
+      },
+      "whatInfo": {
+        "question": "Quelles informations dois-je fournir?",
+        "answer": "Vous aurez besoin de : votre nom complet, âge, localisation (ville), méthode de contact (téléphone/email/WhatsApp), type d'aide nécessaire, et une description de votre situation. Vous pouvez choisir quelles informations supplémentaires partager avec les donateurs."
+      },
+      "fees": {
+        "question": "Y a-t-il des frais?",
+        "answer": "Absolument zéro frais. Cette plateforme est 100% gratuite pour tout le monde. Nous ne prenons pas de commissions, nous ne facturons pas les donateurs, et nous ne facturons jamais les familles qui ont besoin d'aide. Nous sommes financés par des dons transparents."
+      },
+      "whoCanHelp": {
+        "question": "Qui sont les donateurs?",
+        "answer": "Nos donateurs sont des individus et des organisations vérifiés du monde entier qui veulent aider. Chaque donateur passe par une vérification d'identité et des vérifications d'antécédents. Vous pouvez voir les profils des donateurs avant de vous connecter."
+      },
+      "privacy": {
+        "question": "Comment ma vie privée est-elle protégée?",
+        "answer": "Vous contrôlez quelles informations sont partagées. Vos coordonnées complètes ne sont jamais publiques. La communication se fait via notre plateforme sécurisée. Vous pouvez choisir de rester partiellement anonyme si vous préférez."
+      },
+      "update": {
+        "question": "Puis-je mettre à jour ma demande?",
+        "answer": "Oui! Vous pouvez vous connecter à tout moment pour mettre à jour votre demande, ajouter des informations ou la marquer comme satisfaite. Vous pouvez également envoyer des mises à jour aux donateurs qui ont exprimé leur intérêt à vous aider."
+      }
+    }
+  },
+  "cta": {
+    "title": "Chaque Seconde Compte",
+    "subtitle": "Des milliers de familles attendent de l'aide en ce moment. Que vous ayez besoin d'aide ou que vous souhaitiez en donner, commencez aujourd'hui.",
+    "buttons": {
+      "needHelp": "J'ai Besoin d'Aide",
+      "wantToHelp": "Je Veux Aider"
+    },
+    "urgencyNote": "Les demandes urgentes sont prioritaires et examinées dans les 12 heures"
   },
   "howItHelps": {
     "title": "Comment cette plateforme aide",
