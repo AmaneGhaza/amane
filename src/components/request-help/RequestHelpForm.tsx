@@ -1,12 +1,16 @@
+
 'use client';
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import type { Locale } from '@/app/i18n-config';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
 import type { Dictionary } from '@/lib/types';
 
-export default function RequestHelpForm({ dict, lang, initialCategory }: { dict: Dictionary, lang: Locale, initialCategory: string }) {
+export default function RequestHelpForm({ dict, lang }: { dict: Dictionary, lang: Locale }) {
+  const searchParams = useSearchParams();
+  const initialCategory = searchParams.get('category');
   const [step, setStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
