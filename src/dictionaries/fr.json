@@ -1,0 +1,174 @@
+
+{
+  "metadata": {
+    "title": "Aman Gaza",
+    "description": "Soutien et Assistance pour Gaza — Sûr, Vérifié et Transparent."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "findHelp": "Trouver de l'aide",
+    "requestHelp": "Demander de l'aide",
+    "donate": "Faire un don",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Soutien et Assistance pour Gaza — Sûr, Vérifié et Transparent.",
+    "stats": {
+      "donors": "+12 450 donateurs vérifiés enregistrés dans le monde",
+      "families": "+32 000 familles aidées depuis 2023",
+      "transparency": "Aide fournie via des profils transparents et vérifiés."
+    },
+    "buttons": {
+      "findHelp": "Trouver de l'aide",
+      "donate": "Devenir Donateur"
+    }
+  },
+  "howItHelps": {
+    "title": "Comment cette plateforme aide",
+    "categories": {
+      "medical": "Aide médicale",
+      "food": "Nourriture et produits essentiels",
+      "shelter": "Logement et abri",
+      "education": "Éducation et enfants",
+      "elderly": "Soutien aux aînés",
+      "financial": "Aide financière d'urgence"
+    }
+  },
+  "quickStart": {
+    "title": "Guide de démarrage rapide",
+    "steps": {
+      "step1": {
+        "title": "Créez une demande d'aide",
+        "description": "Remplissez un formulaire simple pour expliquer vos besoins."
+      },
+      "step2": {
+        "title": "Soyez mis en relation avec des donateurs",
+        "description": "Nous associons votre demande aux donateurs disponibles."
+      },
+      "step3": {
+        "title": "Recevez de l'aide en toute sécurité",
+        "description": "Obtenez du soutien directement et en toute sécurité."
+      }
+    }
+  },
+  "safety": {
+    "title": "Votre sécurité est notre priorité",
+    "features": {
+      "noFees": "Sans frais",
+      "noIntermediaries": "Aucun intermédiaire hors plateforme",
+      "private": "Profils privés et sécurisés",
+      "verifiedDonors": "Donateurs vérifiés uniquement"
+    },
+    "privacy": "Comment nous protégeons vos informations"
+  },
+  "helpSearch": {
+    "title": "Trouvez l'aide dont vous avez besoin",
+    "placeholder": "Recherchez par ville, type d'aide, urgence...",
+    "filters": {
+      "city": "Ville / Région",
+      "helpType": "Type d'aide",
+      "urgency": "Niveau d'urgence",
+      "donorName": "Nom du donateur (optionnel)",
+      "keyword": "Mot-clé"
+    },
+    "buttons": {
+      "search": "Rechercher"
+    }
+  },
+  "buttons": {
+    "submit": "Soumettre",
+    "learnMore": "En savoir plus"
+  },
+  "requestHelpPage": {
+    "title": "Demander de l'aide",
+    "description": "Remplissez le formulaire ci-dessous pour créer votre demande. Elle sera examinée et mise en relation avec des donateurs appropriés.",
+    "form": {
+      "fullName": {
+        "label": "Nom complet",
+        "placeholder": "Entrez votre nom complet"
+      },
+      "city": {
+        "label": "Ville",
+        "placeholder": "Sélectionnez votre ville"
+      },
+      "helpCategory": {
+        "label": "Catégorie d'aide",
+        "placeholder": "Choisissez une catégorie"
+      },
+      "description": {
+        "label": "Courte description",
+        "placeholder": "Décrivez clairement votre situation et vos besoins."
+      },
+      "contactPreference": {
+        "label": "Préférence de contact",
+        "placeholder": "Choisissez une méthode de contact"
+      },
+      "success": "Votre demande a été soumise avec succès !",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "helpTypes": {
+      "medical": "Médical",
+      "food": "Nourriture",
+      "shelter": "Abri",
+      "education": "Éducation",
+      "elderSupport": "Soutien aux aînés",
+      "financial": "Aide financière"
+    },
+    "contactTypes": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "findHelpPage": {
+    "title": "Trouver de l'aide",
+    "description": "Utilisez les filtres pour trouver le soutien disponible.",
+    "results": "Résultats de recherche",
+    "status": {
+      "available": "Disponible",
+      "unavailable": "Temporairement indisponible"
+    }
+  },
+  "donatePage": {
+    "title": "Devenir Donateur",
+    "description": "Votre contribution fait une réelle différence. Rejoignez notre réseau mondial de donateurs dès aujourd'hui.",
+    "howItWorks": "Comment fonctionnent les dons",
+    "impact": "Notre Impact",
+    "transparency": "Transparence Juridique"
+  },
+  "aboutPage": {
+    "title": "À propos de nous",
+    "mission": "Notre Mission",
+    "missionText": "Notre mission est de construire un pont sûr et fiable entre les personnes dans le besoin à Gaza et les donateurs du monde entier, avec dignité et transparence.",
+    "values": "Nos Valeurs",
+    "valuesText": "Transparence, Dignité, Rapidité, Sécurité.",
+    "verification": "Notre Processus de Vérification",
+    "achievements": "Nos Réalisations"
+  },
+  "contactPage": {
+    "title": "Contactez-nous",
+    "description": "Nous sommes là pour aider. Contactez-nous via l'un des canaux ci-dessous.",
+    "form": {
+      "name": {
+        "label": "Nom",
+        "placeholder": "Votre nom"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Votre email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Écrivez votre message ici..."
+      }
+    },
+    "info": {
+      "whatsapp": "Contacter via WhatsApp",
+      "email": "Envoyer un Email"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Aman Gaza. Tous droits réservés."
+  }
+}

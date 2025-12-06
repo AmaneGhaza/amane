@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "gaza-map",
+      "description": "A static illustration of the map of Palestine with Gaza regions highlighted.",
+      "imageUrl": "https://images.unsplash.com/photo-1736117704303-68f39b863af6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYXphJTIwbWFwfGVufDB8fHx8MTc2NTAxNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaza map"
+    },
+    {
+      "id": "donor-impact",
+      "description": "Image showing the impact of donations, like a food package being delivered.",
+      "imageUrl": "https://images.unsplash.com/photo-1617699755337-c79e46f7eb0e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aHVtYW5pdGFyaWFuJTIwYWlkfGVufDB8fHx8MTc2NTAxNjI0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "humanitarian aid"
+    },
+    {
+      "id": "about-us-team",
+      "description": "A picture of the team or volunteers working.",
+      "imageUrl": "https://images.unsplash.com/photo-1652811435140-1b0f6fbf2915?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx2b2x1bnRlZXJzJTIwd29ya2luZ3xlbnwwfHx8fDE3NjUwMTA1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volunteers working"
+    }
+  ]
 }

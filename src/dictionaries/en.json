@@ -1,0 +1,174 @@
+
+{
+  "metadata": {
+    "title": "Aman Gaza",
+    "description": "Support and Assistance for Gaza — Safe, Verified, and Transparent."
+  },
+  "navigation": {
+    "home": "Home",
+    "findHelp": "Find Help",
+    "requestHelp": "Request Help",
+    "donate": "Donate",
+    "about": "About Us",
+    "contact": "Contact Us"
+  },
+  "hero": {
+    "headline": "Support and Assistance for Gaza — Safe, Verified, and Transparent.",
+    "stats": {
+      "donors": "+12,450 verified donors registered globally",
+      "families": "+32,000 families matched with help since 2023",
+      "transparency": "Help delivered through transparent, verified profiles."
+    },
+    "buttons": {
+      "findHelp": "Find Help",
+      "donate": "Become a Donor"
+    }
+  },
+  "howItHelps": {
+    "title": "How This Platform Helps",
+    "categories": {
+      "medical": "Medical help",
+      "food": "Food and essentials",
+      "shelter": "Housing & shelter",
+      "education": "Education & children",
+      "elderly": "Elder support",
+      "financial": "Emergency financial aid"
+    }
+  },
+  "quickStart": {
+    "title": "Quick Start Guide",
+    "steps": {
+      "step1": {
+        "title": "Create a request for help",
+        "description": "Fill a simple form to explain your needs."
+      },
+      "step2": {
+        "title": "Get matched with available donors",
+        "description": "We match your request with available donors."
+      },
+      "step3": {
+        "title": "Start receiving assistance safely",
+        "description": "Get support directly and securely."
+      }
+    }
+  },
+  "safety": {
+    "title": "Your Safety and Security is Our Priority",
+    "features": {
+      "noFees": "No fees",
+      "noIntermediaries": "No intermediaries outside the platform",
+      "private": "Private & secure profiles",
+      "verifiedDonors": "Only verified donors"
+    },
+    "privacy": "How we protect your information"
+  },
+  "helpSearch": {
+    "title": "Find the Help You Need",
+    "placeholder": "Search by city, type of help, urgency level...",
+    "filters": {
+      "city": "City / Region",
+      "helpType": "Type of Help",
+      "urgency": "Urgency Level",
+      "donorName": "Donor Name (optional)",
+      "keyword": "Keyword"
+    },
+    "buttons": {
+      "search": "Search"
+    }
+  },
+  "buttons": {
+    "submit": "Submit",
+    "learnMore": "Learn More"
+  },
+  "requestHelpPage": {
+    "title": "Request Help",
+    "description": "Fill out the form below to create your request. It will be reviewed and matched with suitable donors.",
+    "form": {
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name"
+      },
+      "city": {
+        "label": "City",
+        "placeholder": "Select your city"
+      },
+      "helpCategory": {
+        "label": "Category of help",
+        "placeholder": "Choose a category"
+      },
+      "description": {
+        "label": "Short description",
+        "placeholder": "Clearly describe your situation and needs."
+      },
+      "contactPreference": {
+        "label": "Contact preference",
+        "placeholder": "Choose a contact method"
+      },
+      "success": "Your request has been submitted successfully!",
+      "error": "An error occurred. Please try again."
+    },
+    "helpTypes": {
+      "medical": "Medical",
+      "food": "Food",
+      "shelter": "Shelter",
+      "education": "Education",
+      "elderSupport": "Elder Support",
+      "financial": "Financial Aid"
+    },
+    "contactTypes": {
+      "phone": "Phone",
+      "email": "Email",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "findHelpPage": {
+    "title": "Find Help",
+    "description": "Use the filters to find available support.",
+    "results": "Search Results",
+    "status": {
+      "available": "Available",
+      "unavailable": "Temporarily unavailable"
+    }
+  },
+  "donatePage": {
+    "title": "Become a Donor",
+    "description": "Your contribution makes a real difference. Join our global network of donors today.",
+    "howItWorks": "How Donations Work",
+    "impact": "Our Impact",
+    "transparency": "Legal Transparency"
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "mission": "Our Mission",
+    "missionText": "Our mission is to build a safe and reliable bridge between those in need in Gaza and donors worldwide, with dignity and transparency.",
+    "values": "Our Values",
+    "valuesText": "Transparency, Dignity, Speed, Security.",
+    "verification": "Our Verification Process",
+    "achievements": "Our Achievements"
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description": "We are here to help. Reach out to us through any of the channels below.",
+    "form": {
+      "name": {
+        "label": "Name",
+        "placeholder": "Your name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Your email"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Write your message here..."
+      }
+    },
+    "info": {
+      "whatsapp": "Contact via WhatsApp",
+      "email": "Send an Email"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Aman Gaza. All rights reserved."
+  }
+}
