@@ -1,8 +1,7 @@
-
 'use client';
 import React from 'react';
 import type { Dictionary, Locale } from '@/lib/types';
-import { Stethoscope, Utensils, Home, GraduationCap, Users, HandHoldingHeart } from 'lucide-react';
+import { Stethoscope, Utensils, Home, GraduationCap, Users, HandHeart } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,7 @@ export default function FindHelpClientPage({ dict, lang }: { dict: Dictionary, l
     { id: "shelter", label: dict.howItHelps.categories.shelter, icon: Home, color: "text-purple-500" },
     { id: "education", label: dict.howItHelps.categories.education, icon: GraduationCap, color: "text-yellow-500" },
     { id: "elderly", label: dict.howItHelps.categories.elderly, icon: Users, color: "text-blue-500" },
-    { id: "financial", label: dict.howItHelps.categories.financial, icon: HandHoldingHeart, color: "text-pink-500" },
+    { id: "financial", label: dict.howItHelps.categories.financial, icon: HandHeart, color: "text-pink-500" },
   ];
 
   return (
