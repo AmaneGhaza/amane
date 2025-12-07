@@ -12,32 +12,32 @@ export default function Footer({
   const navItems = [
     { href: '/about', label: dict.navigation.about },
     { href: '/contact', label: dict.navigation.contact },
-    { href: '/request-help', label: dict.navigation.requestHelp },
+    { href: '/find-help', label: dict.navigation.findHelp },
     { href: '/donate', label: dict.navigation.donate },
   ];
 
   return (
-    <footer className="border-t">
-      <div className="container flex flex-col items-center justify-between gap-6 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-          <Link href={`/${lang}`} className="flex items-center gap-2">
+    <footer className="border-t bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col-reverse items-center justify-between gap-y-6 py-8 sm:flex-row">
+          <div className="flex items-center gap-2">
             <HandHeart className="h-6 w-6 text-primary" />
-            <p className="text-center text-sm leading-loose md:text-left">
+            <p className="text-center text-sm text-muted-foreground">
               {dict.footer.copyright}
             </p>
-          </Link>
+          </div>
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={`/${lang}${item.href}`}
+                className="text-foreground/60 transition-colors hover:text-foreground/80"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
         </div>
-        <nav className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={`/${lang}${item.href}`}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </footer>
   );
