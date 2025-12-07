@@ -1,3 +1,5 @@
+'use client';
+
 import type { Dictionary } from '@/lib/types';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -9,18 +11,23 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Search } from 'lucide-react';
+import { useIntersectionObserver } from '@/lib/animation-utils';
 
 export default function HelpSearchSection({ dict }: { dict: Dictionary }) {
+  const [ref, isVisible] = useIntersectionObserver();
+
   return (
-    <section className="py-20 md:py-24 bg-card">
+    <section ref={ref} className="py-20 md:py-24 bg-card">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">
-          {dict.helpSearch.title}
-        </h2>
-        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">{dict.helpSearch.placeholder}</p>
+        <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">
+            {dict.helpSearch.title}
+          </h2>
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">{dict.helpSearch.placeholder}</p>
+        </div>
 
         <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+            <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                 <div className="lg:col-span-2">
                     <Input
                         type="text"
@@ -49,8 +56,8 @@ export default function HelpSearchSection({ dict }: { dict: Dictionary }) {
                     </SelectContent>
                 </Select>
             </div>
-             <div className="mt-6">
-                <Button size="lg" className="w-full md:w-auto">
+             <div className={`mt-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <Button size="lg" className="w-full md:w-auto hover:scale-105 transition-transform duration-300">
                     <Search className="h-5 w-5 me-2" />
                     {dict.helpSearch.buttons.search}
                 </Button>

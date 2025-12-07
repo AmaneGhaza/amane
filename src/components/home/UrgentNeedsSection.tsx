@@ -1,10 +1,15 @@
+'use client';
+
 import type { Dictionary, Locale } from '@/lib/types';
 import { Card, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
 import { AlertCircle, Clock, MapPin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { useIntersectionObserver } from '@/lib/animation-utils';
 
 export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; lang: Locale }) {
+  const [ref, isVisible] = useIntersectionObserver();
+
   const urgentCases = [
     {
       category: dict.urgentNeeds.cases.case1.category,
@@ -40,10 +45,10 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
   };
 
   return (
-    <section className="py-20 md:py-24 bg-card">
+    <section ref={ref} className="py-20 md:py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4">
               <AlertCircle className="h-8 w-8" />
             </div>
@@ -57,34 +62,40 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {urgentCases.map((case_, index) => (
-              <Card key={index} className="border-2 hover:shadow-xl transition-shadow">
-                <CardContent className="p-6">
-                  <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 border ${priorityColors[case_.priority]}`}>
-                    {priorityLabels[case_.priority]}
-                  </div>
-                  
-                  <h3 className="font-bold text-lg mb-3">{case_.category}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
-                    {case_.description}
-                  </p>
+              <div
+                key={index}
+                className={`transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <Card className="border-2 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                  <CardContent className="p-6">
+                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 border ${priorityColors[case_.priority]}`}>
+                      {priorityLabels[case_.priority]}
+                    </div>
+                    
+                    <h3 className="font-bold text-lg mb-3">{case_.category}</h3>
+                    <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                      {case_.description}
+                    </p>
 
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <MapPin className="h-4 w-4" />
-                      <span>{case_.location}</span>
+                    <div className="space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4" />
+                        <span>{case_.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4" />
+                        <span>{case_.timePosted}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Clock className="h-4 w-4" />
-                      <span>{case_.timePosted}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
 
-          <div className="text-center">
-            <Button size="lg" asChild>
+          <div className={`text-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <Button size="lg" asChild className="hover:scale-105 transition-transform duration-300">
               <Link href={`/${lang}/find-help`}>
                 {dict.urgentNeeds.viewAll}
                 <ArrowRight className="h-5 w-5 ms-2" />

@@ -1,8 +1,13 @@
+'use client';
+
 import type { Dictionary } from '@/lib/types';
 import { Heart, Users, Globe, Shield } from 'lucide-react';
 import { Card, CardContent } from '../ui/card';
+import { useIntersectionObserver } from '@/lib/animation-utils';
 
 export default function WhoWeAreSection({ dict }: { dict: Dictionary }) {
+  const [ref, isVisible] = useIntersectionObserver();
+
   const values = [
     {
       icon: <Heart className="h-8 w-8" />,
@@ -27,11 +32,11 @@ export default function WhoWeAreSection({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <section className="py-20 md:py-24 bg-muted/30">
+    <section ref={ref} className="py-20 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">
+          <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">
               {dict.whoWeAre.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -39,7 +44,7 @@ export default function WhoWeAreSection({ dict }: { dict: Dictionary }) {
             </p>
           </div>
 
-          <Card className="mb-8 border-2">
+          <Card className={`mb-8 border-2 hover:shadow-xl transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`} style={{ transitionDelay: '200ms' }}>
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4 text-center">
                 {dict.whoWeAre.mission}
@@ -51,8 +56,12 @@ export default function WhoWeAreSection({ dict }: { dict: Dictionary }) {
           </Card>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {values.map((value) => (
-              <Card key={value.title} className="hover:shadow-lg transition-shadow">
+            {values.map((value, index) => (
+              <Card 
+                key={value.title} 
+                className={`hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+                style={{ transitionDelay: `${300 + index * 100}ms` }}
+              >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="text-primary mt-1">{value.icon}</div>
