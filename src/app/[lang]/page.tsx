@@ -17,10 +17,11 @@ import FAQSection from '@/components/home/FAQSection';
 import CTASection from '@/components/home/CTASection';
 
 export default async function Home({
-  params: { lang },
+  params,
 }: {
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
+  const { lang } = await params;
   const dict = await getDictionary(lang);
 
   return (

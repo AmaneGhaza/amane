@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HandHeart, Menu } from 'lucide-react';
+import { HandHeart, Menu, X } from 'lucide-react';
 import type { Dictionary, Locale } from '@/lib/types';
 import LanguageSwitcher from './LanguageSwitcher';
 import { Button } from '@/components/ui/button';
@@ -22,74 +22,127 @@ export default function Header({
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-7xl items-center justify-between">
-        {/* Logo */}
-        <Link href={`/${lang}`} className="flex items-center gap-2">
-          <HandHeart className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">{dict.metadata.title}</span>
-        </Link>
+      <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="flex h-14 sm:h-16 lg:h-18 items-center justify-between gap-3 sm:gap-4 max-w-[1920px] mx-auto">
+          {/* Logo - Responsive sizing */}
+          <Link 
+            href={`/${lang}`} 
+            className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0"
+          >
+            <HandHeart className="h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 text-primary" />
+            <span className="font-bold text-base sm:text-lg lg:text-xl whitespace-nowrap">
+              {dict.metadata.title}
+            </span>
+          </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 items-center justify-center gap-6 text-sm font-medium">
-          {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={`/${lang}${item.href}`}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center justify-end gap-4">
-          <Button asChild>
-            <Link href={`/${lang}/request-help`}>{dict.navigation.requestHelp}</Link>
-          </Button>
-          <LanguageSwitcher lang={lang} />
-        </div>
+          {/* Tablet Navigation (768px - 1023px) */}
+          <nav className="hidden md:flex lg:hidden flex-1 items-center justify-center gap-3 text-sm font-medium">
+            {navItems.slice(0, 3).map((item) => (
+              <Link
+                key={item.label}
+                href={`/${lang}${item.href}`}
+                className="text-foreground/60 transition-colors hover:text-foreground/80 whitespace-nowrap"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="icon">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side={lang === 'ar' ? 'right' : 'left'}>
-              <div className="flex flex-col gap-6 pt-8">
-                <Link href={`/${lang}`} className="flex items-center gap-2 mb-4">
-                  <HandHeart className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-lg">{dict.metadata.title}</span>
-                </Link>
-                <nav className="flex flex-col gap-4 text-lg font-medium">
-                  {navItems.map((item) => (
-                    <SheetClose asChild key={item.label}>
-                      <Link
-                        href={`/${lang}${item.href}`}
-                        className="text-foreground/80 transition-colors hover:text-foreground"
-                      >
-                        {item.label}
-                      </Link>
+          {/* Desktop Navigation (1024px+) */}
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-6 text-sm font-medium">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={`/${lang}${item.href}`}
+                className="text-foreground/60 transition-colors hover:text-foreground/80 whitespace-nowrap px-1"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          
+          {/* Desktop Actions (1024px+) */}
+          <div className="hidden lg:flex items-center justify-end gap-3 xl:gap-4 flex-shrink-0">
+            <Button asChild size="default" className="whitespace-nowrap">
+              <Link href={`/${lang}/request-help`}>
+                {dict.navigation.requestHelp}
+              </Link>
+            </Button>
+            <LanguageSwitcher lang={lang} />
+          </div>
+
+          {/* Tablet Actions (768px - 1023px) */}
+          <div className="hidden md:flex lg:hidden items-center justify-end gap-2 flex-shrink-0">
+            <Button asChild size="sm" className="whitespace-nowrap text-xs">
+              <Link href={`/${lang}/request-help`}>
+                {dict.navigation.requestHelp}
+              </Link>
+            </Button>
+            <LanguageSwitcher lang={lang} />
+          </div>
+
+          {/* Mobile Navigation (< 768px) */}
+          <div className="flex md:hidden items-center gap-2">
+            <LanguageSwitcher lang={lang} />
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon" className="h-9 w-9">
+                  <Menu className="h-4 w-4" />
+                  <span className="sr-only">Open menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent 
+                side={lang === 'ar' ? 'right' : 'left'}
+                className="w-[280px] sm:w-[320px]"
+              >
+                <div className="flex flex-col gap-6 pt-6">
+                  {/* Mobile Logo */}
+                  <div className="flex items-center justify-between">
+                    <Link 
+                      href={`/${lang}`} 
+                      className="flex items-center gap-2"
+                    >
+                      <HandHeart className="h-6 w-6 text-primary" />
+                      <span className="font-bold text-lg">
+                        {dict.metadata.title}
+                      </span>
+                    </Link>
+                    <SheetClose asChild>
+                      <Button variant="ghost" size="icon" className="h-8 w-8">
+                        <X className="h-4 w-4" />
+                        <span className="sr-only">Close menu</span>
+                      </Button>
                     </SheetClose>
-                  ))}
-                </nav>
-                <div className="mt-4 border-t pt-6 space-y-4">
-                  <SheetClose asChild>
-                    <Button asChild size="lg" className="w-full">
-                      <Link href={`/${lang}/request-help`}>{dict.navigation.requestHelp}</Link>
-                    </Button>
-                  </SheetClose>
-                  <div className="mx-auto flex justify-center">
-                    <LanguageSwitcher lang={lang} />
+                  </div>
+
+                  {/* Mobile Navigation Links */}
+                  <nav className="flex flex-col gap-1">
+                    {navItems.map((item) => (
+                      <SheetClose asChild key={item.label}>
+                        <Link
+                          href={`/${lang}${item.href}`}
+                          className="text-foreground/80 transition-colors hover:text-foreground hover:bg-accent rounded-md px-3 py-2.5 text-base font-medium"
+                        >
+                          {item.label}
+                        </Link>
+                      </SheetClose>
+                    ))}
+                  </nav>
+
+                  {/* Mobile CTA */}
+                  <div className="mt-2 border-t pt-6">
+                    <SheetClose asChild>
+                      <Button asChild size="lg" className="w-full">
+                        <Link href={`/${lang}/request-help`}>
+                          {dict.navigation.requestHelp}
+                        </Link>
+                      </Button>
+                    </SheetClose>
                   </div>
                 </div>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

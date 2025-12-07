@@ -367,6 +367,28 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Aman Gaza. All rights reserved."
-  }
+  "copyright": "© 2024 Aman Gaza. All rights reserved.",
+  "quickLinks": "Quick Links",
+  "resources": "Resources",
+  "volunteer": "Volunteer",
+  "faq": "FAQ",
+  "news": "News & Updates",
+  "partners": "Our Partners",
+  "legal": "Legal",
+  "privacy": "Privacy Policy",
+  "terms": "Terms of Service",
+  "cookies": "Cookie Policy",
+  "accessibility": "Accessibility",
+  "email": "Email",
+  "phone": "Phone",
+  "address": "Address",
+  "description": "Connecting people in Gaza who need help with verified donors worldwide. Built on trust, transparency, and dignity.",
+  "newsletter": "Newsletter",
+  "newsletterDesc": "Stay updated with our latest news and initiatives.",
+  "emailPlaceholder": "Your email",
+  "subscribe": "Subscribe",
+  "rights": "All rights reserved.",
+  "madeWith": "Made with",
+  "inMorocco": "in Morocco"
+}
 }
