@@ -36,7 +36,7 @@ export default function TrustIndicatorsSection({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-24">
+    <section ref={ref} className="py-20 md:py-24 bg-white dark:bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -56,9 +56,9 @@ export default function TrustIndicatorsSection({ dict }: { dict: Dictionary }) {
                 className={`transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <Card className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-card">
                   <CardContent className="p-6">
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                    <div className="text-4xl md:text-5xl font-bold text-[#EE2A35] mb-2">
                       {stat.number}
                     </div>
                     <p className="text-sm text-muted-foreground font-medium">
@@ -72,15 +72,15 @@ export default function TrustIndicatorsSection({ dict }: { dict: Dictionary }) {
 
           {/* Guarantees */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Card className="bg-primary/5 border-2 border-primary/20">
+            <Card className="bg-[#009736]/5 border-2 border-[#009736]/20">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-center">
+                <h3 className="text-2xl font-bold mb-6 text-center text-[#009736]">
                   {dict.trustIndicators.guaranteesTitle}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {guarantees.map((guarantee, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary shrink-0 mt-1" />
+                      <CheckCircle2 className="h-6 w-6 text-[#009736] shrink-0 mt-1" />
                       <p className="text-muted-foreground leading-relaxed">
                         {guarantee}
                       </p>

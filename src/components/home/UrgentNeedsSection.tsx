@@ -35,8 +35,8 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
   ];
 
   const priorityColors = {
-    urgent: 'bg-red-100 text-red-700 border-red-200',
-    high: 'bg-orange-100 text-orange-700 border-orange-200',
+    urgent: 'bg-[#EE2A35]/10 text-[#EE2A35] border-[#EE2A35]/20',
+    high: 'bg-[#EE2A35]/10 text-[#EE2A35] border-[#EE2A35]/20',
   };
 
   const priorityLabels = {
@@ -45,14 +45,14 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
   };
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-card">
+    <section ref={ref} className="py-20 md:py-24 bg-card dark:bg-[#111111]">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 text-red-600 mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#EE2A35]/10 text-[#EE2A35] mb-4">
               <AlertCircle className="h-8 w-8" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline text-red-600">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline text-[#EE2A35]">
               {dict.urgentNeeds.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -67,7 +67,7 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
                 className={`transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Card className="border-2 hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                <Card className="border-2 border-[#EE2A35]/50 hover:shadow-xl hover:-translate-y-2 transition-all duration-500 bg-white dark:bg-black">
                   <CardContent className="p-6">
                     <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold mb-4 border ${priorityColors[case_.priority]}`}>
                       {priorityLabels[case_.priority]}
@@ -95,7 +95,7 @@ export default function UrgentNeedsSection({ dict, lang }: { dict: Dictionary; l
           </div>
 
           <div className={`text-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Button size="lg" asChild className="hover:scale-105 transition-transform duration-300">
+            <Button size="lg" asChild className="hover:scale-105 transition-transform duration-300 bg-[#EE2A35] hover:bg-[#c62828] text-white">
               <Link href={`/${lang}/find-help`}>
                 {dict.urgentNeeds.viewAll}
                 <ArrowRight className="h-5 w-5 ms-2" />

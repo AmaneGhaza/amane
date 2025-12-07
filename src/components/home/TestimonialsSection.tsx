@@ -30,7 +30,7 @@ export default function TestimonialsSection({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-muted/30">
+    <section ref={ref} className="py-20 md:py-24 bg-muted/30 dark:bg-[#111111]">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -49,15 +49,15 @@ export default function TestimonialsSection({ dict }: { dict: Dictionary }) {
                 className={`transition-all duration-700 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <Card className="relative hover:shadow-lg hover:-translate-y-2 transition-all duration-500 h-full">
+                <Card className="relative hover:shadow-lg hover:-translate-y-2 transition-all duration-500 h-full bg-white dark:bg-black">
                   <CardContent className="p-6 flex flex-col h-full">
-                    <Quote className="h-10 w-10 text-primary/20 mb-4" />
+                    <Quote className="h-10 w-10 text-[#009736]/20 mb-4" />
                     
                     <div className="flex gap-1 mb-4">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                          className="h-4 w-4 fill-[#009736] text-[#009736]"
                         />
                       ))}
                     </div>
@@ -71,7 +71,7 @@ export default function TestimonialsSection({ dict }: { dict: Dictionary }) {
                       <p className="text-sm text-muted-foreground">
                         {testimonial.location}
                       </p>
-                      <div className="mt-2 inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                      <div className="mt-2 inline-block px-3 py-1 bg-[#EE2A35]/10 text-[#EE2A35] text-xs font-medium rounded-full">
                         {testimonial.helpType}
                       </div>
                     </div>

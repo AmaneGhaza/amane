@@ -10,17 +10,17 @@ export default function CTASection({ dict, lang }: { dict: Dictionary; lang: Loc
   const [ref, isVisible] = useIntersectionObserver();
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-gradient-to-br from-purple-600 to-pink-600 text-primary-foreground relative overflow-hidden">
+    <section ref={ref} className="py-20 md:py-24 bg-gradient-to-br from-[#000000] to-[#EE2A35] text-white relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className={`absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} />
-        <div className={`absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`} />
+        <div className={`absolute top-0 left-0 w-96 h-96 bg-[#FFFFFF]/10 rounded-full blur-3xl transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} />
+        <div className={`absolute bottom-0 right-0 w-96 h-96 bg-[#009736]/20 rounded-full blur-3xl transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`} />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <Heart className="h-16 w-16 mx-auto mb-6 animate-pulse" />
+            <Heart className="h-16 w-16 mx-auto mb-6 text-[#EE2A35] animate-pulse" />
             
             <h2 className="text-3xl md:text-5xl font-bold mb-6 font-headline">
               {dict.cta.title}
@@ -34,8 +34,7 @@ export default function CTASection({ dict, lang }: { dict: Dictionary; lang: Loc
           <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <Button 
               size="lg" 
-              variant="secondary" 
-              className="text-lg px-8 py-6 h-auto shadow-xl hover:scale-105 transition-transform duration-300"
+              className="text-lg px-8 py-6 h-auto shadow-xl hover:scale-105 transition-transform duration-300 bg-[#009736] hover:bg-[#007f2d] text-white"
               asChild
             >
               <Link href={`/${lang}/request-help`}>

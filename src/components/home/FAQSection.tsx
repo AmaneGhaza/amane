@@ -49,11 +49,11 @@ export default function FAQSection({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-900">
+    <section ref={ref} className="py-20 md:py-24 bg-gradient-to-br from-white to-[#f5f5f5] dark:from-[#000000] dark:to-[#111111]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#009736]/10 text-[#009736] mb-4">
               <HelpCircle className="h-8 w-8" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">
@@ -73,7 +73,7 @@ export default function FAQSection({ dict }: { dict: Dictionary }) {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="border rounded-lg px-6 bg-card hover:shadow-lg transition-shadow duration-300"
+                  className="border rounded-lg px-6 bg-card hover:shadow-lg transition-shadow duration-300 border-[#009736]/20"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-4">
                     <span className="font-semibold text-lg">{faq.question}</span>

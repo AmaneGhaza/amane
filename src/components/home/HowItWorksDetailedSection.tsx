@@ -18,35 +18,35 @@ export default function HowItWorksDetailedSection({ dict }: { dict: Dictionary }
   const steps = [
     {
       number: '1',
-      icon: <FileText className="h-8 w-8" />,
+      icon: <FileText className="h-8 w-8 text-[#EE2A35]" />,
       title: dict.howItWorks.steps.step1.title,
       description: dict.howItWorks.steps.step1.description,
       details: dict.howItWorks.steps.step1.details,
     },
     {
       number: '2',
-      icon: <CheckCircle className="h-8 w-8" />,
+      icon: <CheckCircle className="h-8 w-8 text-[#009736]" />,
       title: dict.howItWorks.steps.step2.title,
       description: dict.howItWorks.steps.step2.description,
       details: dict.howItWorks.steps.step2.details,
     },
     {
       number: '3',
-      icon: <Users className="h-8 w-8" />,
+      icon: <Users className="h-8 w-8 text-[#000000] dark:text-[#FFFFFF]" />,
       title: dict.howItWorks.steps.step3.title,
       description: dict.howItWorks.steps.step3.description,
       details: dict.howItWorks.steps.step3.details,
     },
     {
       number: '4',
-      icon: <MessageCircle className="h-8 w-8" />,
+      icon: <MessageCircle className="h-8 w-8 text-[#009736]" />,
       title: dict.howItWorks.steps.step4.title,
       description: dict.howItWorks.steps.step4.description,
       details: dict.howItWorks.steps.step4.details,
     },
     {
       number: '5',
-      icon: <HandHeart className="h-8 w-8" />,
+      icon: <HandHeart className="h-8 w-8 text-[#EE2A35]" />,
       title: dict.howItWorks.steps.step5.title,
       description: dict.howItWorks.steps.step5.description,
       details: dict.howItWorks.steps.step5.details,
@@ -54,11 +54,11 @@ export default function HowItWorksDetailedSection({ dict }: { dict: Dictionary }
   ];
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-white dark:bg-gray-900">
+    <section ref={ref} className="py-20 md:py-24 bg-white dark:bg-[#000000]">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-600 dark:from-blue-400 dark:to-green-400">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline bg-clip-text text-transparent bg-gradient-to-r from-[#009736] to-[#000000] dark:from-[#009736] dark:to-[#FFFFFF]">
               {dict.howItWorks.title}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -69,15 +69,15 @@ export default function HowItWorksDetailedSection({ dict }: { dict: Dictionary }
           <div className="space-y-8">
             {steps.map((step, index) => (
               <div key={step.number} className="relative">
-                <Card className={`hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : index % 2 === 0 ? 'opacity-0 -translate-x-20' : 'opacity-0 translate-x-20'}`} style={{ transitionDelay: `${index * 150}ms` }}>
+                <Card className={`bg-white dark:bg-[#111111] hover:shadow-2xl hover:-translate-y-2 transition-all duration-700 ${isVisible ? 'opacity-100 translate-x-0' : index % 2 === 0 ? 'opacity-0 -translate-x-20' : 'opacity-0 translate-x-20'}`} style={{ transitionDelay: `${index * 150}ms` }}>
                   <CardContent className="p-6 md:p-8">
                     <div className="flex flex-col md:flex-row gap-6">
                       {/* Number and Icon */}
                       <div className="flex gap-4 md:gap-6 items-start shrink-0">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 text-white flex items-center justify-center text-2xl font-bold shrink-0 shadow-lg">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#EE2A35] to-[#000000] text-white flex items-center justify-center text-2xl font-bold shrink-0 shadow-lg">
                           {step.number}
                         </div>
-                        <div className="text-primary shrink-0">{step.icon}</div>
+                        <div className="shrink-0">{step.icon}</div>
                       </div>
 
                       {/* Content */}
@@ -86,7 +86,7 @@ export default function HowItWorksDetailedSection({ dict }: { dict: Dictionary }
                         <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
                           {step.description}
                         </p>
-                        <div className="bg-muted/50 rounded-lg p-4 border-l-4 border-primary">
+                        <div className="bg-muted/50 dark:bg-[#FFFFFF]/5 rounded-lg p-4 border-l-4 border-[#009736]">
                           <p className="text-sm text-muted-foreground leading-relaxed">
                             <strong className="text-foreground">
                               {dict.howItWorks.detailsLabel}:
@@ -102,7 +102,7 @@ export default function HowItWorksDetailedSection({ dict }: { dict: Dictionary }
                 {/* Arrow between steps */}
                 {index < steps.length - 1 && (
                   <div className="flex justify-center my-4 md:hidden">
-                    <ArrowRight className="h-8 w-8 text-primary rotate-90 animate-pulse" />
+                    <ArrowRight className="h-8 w-8 text-[#009736] rotate-90 animate-pulse" />
                   </div>
                 )}
               </div>

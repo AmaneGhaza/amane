@@ -17,7 +17,7 @@ export default function HelpSearchSection({ dict }: { dict: Dictionary }) {
   const [ref, isVisible] = useIntersectionObserver();
 
   return (
-    <section ref={ref} className="py-20 md:py-24 bg-card">
+    <section ref={ref} className="py-20 md:py-24 bg-card dark:bg-[#111111]">
       <div className="container mx-auto px-4 text-center">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-headline">
@@ -57,7 +57,7 @@ export default function HelpSearchSection({ dict }: { dict: Dictionary }) {
                 </Select>
             </div>
              <div className={`mt-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <Button size="lg" className="w-full md:w-auto hover:scale-105 transition-transform duration-300">
+                <Button size="lg" className="w-full md:w-auto hover:scale-105 transition-transform duration-300 bg-[#009736] hover:bg-[#007f2d] text-white">
                     <Search className="h-5 w-5 me-2" />
                     {dict.helpSearch.buttons.search}
                 </Button>
